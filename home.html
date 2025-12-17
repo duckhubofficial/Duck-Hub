@@ -1,1 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duck Web | Premium Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <nav class="navbar">
+        <div class="logo">
+            <span class="duck-emoji">🦆</span> DUCK WEB
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">GAMES</a></li>
+            <li><a href="#">APPS</a></li>
+            <li><a href="#">SETTINGS</a></li>
+        </ul>
+        <div class="time-container">
+            <span id="clock">00:00:00</span>
+        </div>
+    </nav>
+
+    <header class="main-header">
+        <div class="duck-shield">
+            <h1 class="brand-title">DUCK WEB</h1>
+            <p class="tagline">The Golden Standard of the Web.</p>
+        </div>
+    </header>
+
+    <main class="content-area">
+        <div class="grid-container">
+            <div class="item-card">
+                <div class="icon-box">🕹️</div>
+                <h3>Arcade</h3>
+                <p>High-speed unblocked gaming.</p>
+                <a href="#" class="action-link">Explore</a>
+            </div>
+
+            <div class="item-card featured">
+                <div class="icon-box">🔒</div>
+                <h3>Stealth Proxy</h3>
+                <p>Private and secure browsing.</p>
+                <a href="#" class="action-link gold-fill">Launch</a>
+            </div>
+
+            <div class="item-card">
+                <div class="icon-box">📱</div>
+                <h3>Web Apps</h3>
+                <p>Tools for every situation.</p>
+                <a href="#" class="action-link">Open</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>DUCK WEB &copy; 2025 | Powered by the Pond</p>
+    </footer>
+  <style>
+    :root {
+    --black-primary: #050505;
+    --black-secondary: #121212;
+    --gold-bright: #FFD700;
+    --gold-muted: #D4AF37;
+    --white: #F5F5F5;
+    --gray: #888888;
+}
+
+body {
+    background-color: var(--black-primary);
+    color: var(--white);
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: var(--black-secondary);
+    border-bottom: 1px solid var(--gold-muted);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--gold-bright);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--gray);
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--gold-bright);
+}
+
+/* Header */
+.main-header {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.brand-title {
+    font-size: 4rem;
+    margin: 0;
+    color: var(--gold-bright);
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.tagline {
+    color: var(--gray);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Grid Layout */
+.content-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+/* Cards */
+.item-card {
+    background: var(--black-secondary);
+    padding: 40px;
+    border-radius: 4px;
+    border: 1px solid #222;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.item-card:hover {
+    border-color: var(--gold-muted);
+    transform: translateY(-5px);
+}
+
+.featured {
+    border: 1px solid var(--gold-muted);
+    box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.icon-box {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.action-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    color: var(--gold-muted);
+    text-decoration: none;
+    border: 1px solid var(--gold-muted);
+    border-radius: 2px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.action-link:hover {
+    background: var(--gold-muted);
+    color: black;
+}
+
+.gold-fill {
+    background: var(--gold-muted);
+    color: black;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #1a1a1a;
+    color: #444;
+}
+  </style>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').innerText = now.toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
